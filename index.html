@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      color: #EEEEEE;
+      background: rgb(57, 62, 70);
+      background: radial-gradient(circle, rgba(57, 62, 70, 1) 0%, rgba(34, 40, 49, 1) 62%);
+
+      background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    }
+
+    .pricing-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 2em;
+      height: 100vh;
+    }
+
+    .pricing-plan {
+      flex-basis: em;
+      border-radius: 3%;
+      padding: 1em;
+      width: 25em;
+
+      border: solid .2em transparent;
+      background-image: linear-gradient(#222831, #393E46),
+        linear-gradient(to bottom, #777, #CCC);
+      border-radius: 5%;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+    }
+
+    .plan-title {
+      font-weight: bold;
+    }
+
+    .plan-price {
+      font-weight: bolder;
+      font-size: 3em;
+    }
+
+    .per-month {
+      font-size: smaller;
+      opacity: 80%;
+    }
+
+    hr {
+      border: 0;
+      height: 2px;
+      background-image: linear-gradient(to right, rgba(34, 40, 49, 0),
+          rgba(34, 40, 49, 1), rgba(34, 40, 49, 0));
+      margin-bottom: 2em;
+    }
+
+    .plan-title,
+    .plan-price {
+      text-shadow: 2px 0 #222831, -2px 0 #222831, 0 2px #222831, 0 -2px #222831,
+        1px 1px #222831, -1px -1px #222831, 1px -1px #222831, -1px 1px #222831;
+    }
+
+    .plan-button {
+      background-color: #00ADB5;
+      color: #EEEEEE;
+      padding: .5em 2em;
+      font-size: large;
+      border-radius: 32px;
+      border-style: solid;
+      transition: 0.8s;
+      opacity: .6;
+      border-color: #222831;
+    }
+
+    .plan-button:hover {
+      opacity: 1;
+      cursor: pointer;
+      border-color: #EEEEEE;
+    }
+
+    .plan-button:active {
+      transition: 0.01s;
+      transform: scale(.96);
+      border-color: #393E46;
+    }
+
+    li {
+      list-style-type: none;
+      margin: 1em;
+      text-align: start;
+      margin-left: 5em;
+    }
+
+    @media (max-width: 1250px) {
+      .pricing-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+      }
+
+
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/ea94ec15a5.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99</div>
+      <div class="per-month"> per month</div>
+      <hr>
+      <ul class="plan-features">
+        <li> <i class="fa fa-check" style="color: #00adb5;"></i></i> 10GB Storage</li>
+        <li> <i class="fa fa-check" style="color: #00adb5;"></i></i> 1 User</li>
+        <li><i class="fa fa-xmark" style="color: #ff0000;"></i> Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99</div>
+      <div class="per-month"> per month</div>
+      <hr>
+      <ul class="plan-features">
+        <li><i class="fa fa-check" style="color: #00adb5;"></i></i> 50GB Storage</li>
+        <li><i class="fa fa-check" style="color: #00adb5;"></i></i> 5 Users</li>
+        <li><i class="fa fa-check" style="color: #00adb5;"></i></i> Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99</div>
+      <div class="per-month"> per month</div>
+      <hr>
+      <ul class="plan-features">
+        <li><i class="fa fa-check" style="color: #00adb5;"></i></i> 100GB Storage</li>
+        <li><i class="fa fa-check" style="color: #00adb5;"></i></i> 10 Users</li>
+        <li><i class="fa fa-check" style="color: #00adb5;"></i></i> 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
